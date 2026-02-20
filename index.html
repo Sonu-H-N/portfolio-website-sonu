@@ -4,52 +4,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
-
-    <!-- CSS -->
+    <title>Sonu | Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <!-- Hero Section -->
+    <!-- Navbar -->
+    <nav class="navbar">
+        <h2 class="logo">Sonu</h2>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero -->
     <header class="hero">
-        <h1>Hi, I'm Sonu</h1>
-        <p>Web Developer | Student</p>
-        <button>Contact Me</button>
+        <div class="hero-content">
+            <h1>Hi, I'm Sonu</h1>
+            <p>Aspiring Web Developer</p>
+            <button>Hire Me</button>
+        </div>
     </header>
 
     <!-- About -->
-    <section class="about">
+    <section id="about" class="section">
         <h2>About Me</h2>
         <p>
-            I am a passionate developer learning web development and building projects.
+            I am a passionate web developer learning modern technologies and building projects.
+            I enjoy solving problems and creating beautiful websites.
         </p>
     </section>
 
+    <!-- Skills -->
+    <section id="skills" class="section">
+        <h2>Skills</h2>
+
+        <div class="skills-container">
+            <div class="skill">HTML</div>
+            <div class="skill">CSS</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">Git</div>
+            <div class="skill">GitHub</div>
+        </div>
+    </section>
+
     <!-- Projects -->
-    <section class="projects">
+    <section id="projects" class="section">
         <h2>Projects</h2>
 
-        <div class="project-card">
-            <h3>Portfolio Website</h3>
-            <p>My personal portfolio built using HTML and CSS.</p>
-        </div>
+        <div class="projects-container">
+            <div class="project-card">
+                <h3>Portfolio Website</h3>
+                <p>My personal portfolio built using HTML & CSS.</p>
+            </div>
 
-        <div class="project-card">
-            <h3>Coming Soon</h3>
-            <p>More projects will be added here.</p>
+            <div class="project-card">
+                <h3>Coming Soon</h3>
+                <p>More projects will be added soon.</p>
+            </div>
         </div>
-
     </section>
 
     <!-- Contact -->
-    <section class="contact">
+    <section id="contact" class="section">
         <h2>Contact</h2>
         <p>Email: your@email.com</p>
     </section>
-
-    <script src="script.js"></script>
 
 </body>
 
