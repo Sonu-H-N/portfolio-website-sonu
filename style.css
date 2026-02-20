@@ -1,4 +1,4 @@
-*  {
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -42,21 +42,31 @@ body {
     text-align: center;
 }
 
-.hero h1 {
-    font-size: 50px;
+.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
 }
 
-.hero p {
-    margin: 15px 0;
+/* Buttons */
+.buttons {
+    margin-top: 20px;
 }
 
-button {
+.btn {
+    display: inline-block;
     padding: 10px 20px;
-    border: none;
+    margin: 5px;
     background: white;
     color: black;
-    cursor: pointer;
+    text-decoration: none;
     border-radius: 5px;
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid white;
+    color: white;
 }
 
 /* Sections */
@@ -92,4 +102,32 @@ button {
     padding: 20px;
     border-radius: 10px;
     width: 250px;
+}.profile-img {
+    width: 150px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+/* Theme Button */
+.theme-btn {
+    font-size: 18px;
+    padding: 8px 12px;
+    cursor: pointer;
+    border: none;
+    border-radius: 6px;
+    background: white;
+}
+
+/* Light Theme */
+.light-mode {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+
+.light-mode .navbar {
+    background: #e2e8f0;
+}
+
+.light-mode .project-card,
+.light-mode .skill {
+    background: #cbd5f5;
 }
