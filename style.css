@@ -8,135 +8,108 @@
 body {
     background: #0f172a;
     color: white;
+    text-align: center;
+    transition: 0.3s;
 }
 
 /* Navbar */
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 40px;
     background: #020617;
-    position: sticky;
-    top: 0;
 }
 
-.navbar ul {
+.nav-links {
     display: flex;
     list-style: none;
     gap: 20px;
 }
 
-.navbar a {
-    text-decoration: none;
+.nav-links a {
     color: white;
+    text-decoration: none;
 }
 
 /* Hero */
 .hero {
-    height: 90vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    padding: 80px 20px;
     background: linear-gradient(135deg, #2563eb, #9333ea);
-    text-align: center;
 }
 
 .profile-img {
-    width: 150px;
+    width: 140px;
     border-radius: 50%;
     margin-bottom: 20px;
 }
 
 /* Buttons */
-.buttons {
-    margin-top: 20px;
-}
-
 .btn {
     display: inline-block;
+    margin: 10px;
     padding: 10px 20px;
-    margin: 5px;
     background: white;
     color: black;
+    border-radius: 6px;
     text-decoration: none;
-    border-radius: 5px;
-}
-
-.btn-outline {
-    background: transparent;
-    border: 1px solid white;
-    color: white;
 }
 
 /* Sections */
 .section {
-    padding: 80px 40px;
-    text-align: center;
+    padding: 60px 20px;
 }
 
 /* Skills */
-.skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-}
-
-.skill {
+.skills span {
+    display: inline-block;
     background: #1e293b;
-    padding: 15px 25px;
-    border-radius: 8px;
+    padding: 10px 15px;
+    margin: 10px;
+    border-radius: 6px;
 }
 
 /* Projects */
 .projects-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
     flex-wrap: wrap;
 }
 
 .project-card {
     background: #1e293b;
     padding: 20px;
-    border-radius: 10px;
+    margin: 15px;
     width: 250px;
-}.profile-img {
-    width: 150px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-}
-/* Theme Button */
-.theme-btn {
-    font-size: 18px;
-    padding: 8px 12px;
-    cursor: pointer;
-    border: none;
-    border-radius: 6px;
-    background: white;
+    border-radius: 10px;
 }
 
-/* Light Theme */
+/* Theme Button */
+.theme-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Light Mode */
 .light-mode {
-    background: #f1f5f9;
-    color: #0f172a;
+    background: #ffffff;
+    color: black;
 }
 
 .light-mode .navbar {
+    background: #e5e7eb;
+}
+
+.light-mode .project-card {
+    background: #f1f5f9;
+    color: black;
+}
+
+.light-mode .skills span {
     background: #e2e8f0;
-}
-
-.light-mode .project-card,
-.light-mode .skill {
-    background: #cbd5f5;
-}
-body {
-    transition: background 0.4s ease, color 0.4s ease;
-}
-
-.navbar,
-.project-card,
-.skill {
-    transition: background 0.4s ease, color 0.4s ease;
 }
