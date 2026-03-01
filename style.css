@@ -173,3 +173,44 @@ body {
         right: 10px;
     }
 }
+/* ===================== */
+/* HAMBURGER MENU */
+/* ===================== */
+
+.menu-toggle {
+    display: none;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background: #020617;
+        width: 200px;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+        padding: 20px;
+        border-radius: 8px;
+    }
+
+    .nav-links li {
+        margin: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+}
