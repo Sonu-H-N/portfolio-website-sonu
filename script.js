@@ -1,68 +1,62 @@
-// ===== THEME TOGGLE WITH SAVE =====
 const toggleBtn = document.getElementById("theme-toggle");
+const navbar = document.querySelector(".navbar");
+const sections = document.querySelectorAll("section");
+const navLinks = document.querySelectorAll(".nav-links a");
+const observerTargets = document.querySelectorAll(".reveal, .project-card");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinksMenu = document.getElementById("nav-links");
 
-// Load saved theme
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light") {
-    document.body.classList.add("light-mode");
-    toggleBtn.textContent = "🌞";
+  document.body.classList.add("light-mode");
+  toggleBtn.textContent = "🌞";
 }
 
 toggleBtn.addEventListener("click", () => {
-    document.body.classList.toggle("light-mode");
-
-    if (document.body.classList.contains("light-mode")) {
-        toggleBtn.textContent = "🌞";
-        localStorage.setItem("theme", "light");
-    } else {
-        toggleBtn.textContent = "🌙";
-        localStorage.setItem("theme", "dark");
-    }
+  document.body.classList.toggle("light-mode");
+  const isLight = document.body.classList.contains("light-mode");
+  toggleBtn.textContent = isLight ? "🌞" : "🌙";
+  localStorage.setItem("theme", isLight ? "light" : "dark");
 });
 
-// ===== NAVBAR SCROLL EFFECT =====
-const navbar = document.querySelector(".navbar");
+menuToggle.addEventListener("click", () => {
+  const isOpen = navLinksMenu.classList.toggle("show-menu");
+  menuToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+});
+
+navLinks.forEach(link => {
+  link.addEventListener("click", () => {
+    if (window.innerWidth <= 768) {
+      navLinksMenu.classList.remove("show-menu");
+      menuToggle.setAttribute("aria-expanded", "false");
+    }
+  });
+});
 
 window.addEventListener("scroll", () => {
-    if (window.scrollY > 50) {
-        navbar.classList.add("nav-scrolled");
-    } else {
-        navbar.classList.remove("nav-scrolled");
+  navbar.classList.toggle("nav-scrolled", window.scrollY > 50);
+
+  let current = "";
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop - 120;
+    if (window.scrollY >= sectionTop) current = section.getAttribute("id");
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove("active");
+    if (link.getAttribute("href") === `#${current}`) {
+      link.classList.add("active");
     }
+  });
 });
 
-// ===== ACTIVE NAV LINK =====
-const sections = document.querySelectorAll("section");
-const navLinks = document.querySelectorAll(".nav-links a");
-
-window.addEventListener("scroll", () => {
-    let current = "";
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (scrollY >= sectionTop) {
-            current = section.getAttribute("id");
-        }
-    });
-
-    navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href").includes(current)) {
-            link.classList.add("active");
-        }
-    });
-});
-
-// ===== SCROLL ANIMATION =====
-const observer = new IntersectionObserver(entries => {
+const observer = new IntersectionObserver(
+  entries => {
     entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add("show");
-        }
+      if (entry.isIntersecting) entry.target.classList.add("show");
     });
-});
+  },
+  { threshold: 0.15 }
+);
 
-document.querySelectorAll(".section, .project-card").forEach(el => {
-    el.classList.add("hidden");
-    observer.observe(el);
-});
+observerTargets.forEach(el => observer.observe(el));
