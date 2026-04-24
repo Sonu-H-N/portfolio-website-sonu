@@ -1,152 +1,88 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Sonu H N - Aspiring Web Developer Portfolio" />
-  <meta name="theme-color" content="#0f172a" />
-  <title>Sonu H N | Portfolio</title>
-  //fonts.googleapis.com">
-  //fonts.gstatic.com" crossorigin>
-  //fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  " />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sonu H N | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <a class="skip-link" href="#main">Skip to content</a>
+<button id="theme-toggle" class="theme-btn">🌙</button>
 
-  <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌙</button>
+<nav class="navbar">
+    <h2 class="logo">Sonu H N</h2>
 
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="#home" class="logo">Sonu H N</a>
+    <div class="menu-toggle" id="menu-toggle">☰</div>
 
-      <button class="menu-toggle" id="menu-toggle" aria-label="Open navigation" aria-expanded="false">
-        ☰
-      </button>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
-      <nav>
-        <ul class="nav-links" id="nav-links">
-          ><a href="#home">Home</a></li>
-          ><a href="#about">About</a></li>
-          ><a href="#skills">Skills</a></li>
-          ><a href="#projects">Projects</a></li>
-          ><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+<section id="home" class="hero section">
+    <img src="profile.jpg" class="profile-img">
+    <h1>Hi, I'm <span id="typing"></span></h1>
+    <p>Aspiring Web Developer</p>
+
+    <div class="buttons">
+        <a href="resume.pdf" class="btn">Download Resume</a>
+        <a href="#contact" class="btn">Contact Me</a>
     </div>
-  </header>
+</section>
 
-  <main id="main">
-    <section id="home" class="hero section">
-      <div class="hero-content">
-        <img src="profile.jpg" alt="Profile photo of Sonu H N" class="profile-img" />
-        <p class="eyebrow">Aspiring Web Developer</p>
-        <h1>Hi, I'm <span>Sonu H N</span></h1>
-        <p class="hero-text">
-          I build modern, responsive, and user-friendly websites with clean code and polished UI.
-        </p>
+<section id="about" class="section reveal">
+    <h2>About Me</h2>
+    <p>I am a passionate developer building responsive websites and modern UI.</p>
+</section>
 
-        <div class="buttons">
-          <a href="resume.pdf" download class="btn primary">Download Resume</a>
-          <a href="#contact" class="btn secondary">Contact Me</a>
-        </div>
-      </div>
-    </section>
+<section id="skills" class="section reveal">
+    <h2>Skills</h2>
+    <div class="skills">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>Git</span>
+        <span>GitHub</span>
+    </div>
+</section>
 
-    <section id="about" class="section reveal">
-      <div class="container">
-        <h2>About Me</h2>
-        <p class="section-text">
-          I’m a web developer focused on creating responsive portfolio sites, interactive UI components,
-          and practical web projects that look good and work smoothly on all devices.
-        </p>
-      </div>
-    </section>
+<section id="projects" class="section reveal">
+    <h2>Projects</h2>
 
-    <section id="skills" class="section reveal">
-      <div class="container">
-        <h2>Skills</h2>
-        <div class="skills">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>Responsive Design</span>
-          <span>Git</span>
-          <span>GitHub</span>
-          <span>LocalStorage</span>
-          <span>API Integration</span>
-        </div>
-      </div>
-    </section>
+    <div class="projects">
 
-    <section id="projects" class="section reveal">
-      <div class="container">
-        <h2>Projects</h2>
-
-        <div class="projects-grid">
-          <article class="project-card">
-            <h3>Smart Finance Dashboard</h3>
-            <p>
-              A personal finance app to track income, expenses, and profit analytics with charts,
-              budget alerts, and downloadable PDF reports.
-            </p>
-            <p class="tech"><strong>Technologies:</strong> HTML, CSS, JavaScript, Chart.js, LocalStorage, PWA</p>
-            <div class="project-buttons">
-              <a href="https://github.com/Sonu-H-N/smart-profit-calculator" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-          </article>
-
-          <article class="project-card">
+        <div class="card">
             <h3>Calculator App</h3>
-            <p>
-              A clean and responsive calculator built using HTML, CSS, and JavaScript with basic operations.
-            </p>
-            <p class="tech"><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-buttons">
-              <a href="https://github.com/Sonu-H-N/calculator-app" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-          </article>
+            <p>Basic calculator using JS.</p>
+            <a href="https://github.com/Sonu-H-N/calculator-app" target="_blank">GitHub</a>
+        </div>
 
-          <article class="project-card">
+        <div class="card">
             <h3>Portfolio Website</h3>
-            <p>
-              My personal portfolio website designed to showcase my skills, projects, and contact details.
-            </p>
-            <p class="tech"><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-            <div class="project-buttons">
-              <a href="#" target="_blank" rel="noopener noreferrer">GitHub</a>
-              <a href="#" target="_blank" rel="noopener noreferrer">Live Demo</a>
-            </div>
-          </article>
-
-          <article class="project-card coming-soon">
-            <h3>Coming Soon</h3>
-            <p>More projects are on the way as I keep building and learning.</p>
-          </article>
+            <p>My personal portfolio.</p>
         </div>
-      </div>
-    </section>
 
-    <section id="contact" class="section reveal">
-      <div class="container contact-box">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:sonuhn0011@gmail.com">sonuhn0011@gmail.com</a></p>
+    </div>
+</section>
 
-        <div class="contact-links">
-          <a href="mailto:sonuhn0011@gmail.com" class="btn primary">Email Me</a>
-          <a href="https://github.com/Sonu-H-N" target="_blank" rel="noopener noreferrer" class="btn secondary">GitHub</a>
-        </div>
-      </div>
-    </section>
-  </main>
+<section id="contact" class="section reveal">
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:sonuhn0011@gmail.com">sonuhn0011@gmail.com</a></p>
+</section>
 
-  <footer class="footer">
-    <p>© 2026 Sonu H N | Portfolio</p>
-  </footer>
+<footer>
+<p>© 2026 Sonu H N | Built with ❤️</p>
+</footer>
 
-  <script src="script.js"></script>
+<script src="script.js"></script>
+
 </body>
 </html>
