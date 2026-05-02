@@ -1,88 +1,366 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sonu H N | Portfolio</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Sonu H N – Aspiring Web Developer skilled in HTML, CSS, JavaScript, Git & GitHub. Check out my projects and get in touch." />
+  <meta name="keywords" content="Sonu H N, Web Developer, Portfolio, HTML, CSS, JavaScript, Frontend Developer" />
+  <meta name="author" content="Sonu H N" />
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+  <!-- Open Graph / Social Preview -->
+  <meta property="og:title" content="Sonu H N | Web Developer Portfolio" />
+  <meta property="og:description" content="Aspiring Web Developer building responsive and modern UIs." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="profile.jpg" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
+
+  <title>Sonu H N | Web Developer Portfolio</title>
+
+  <!-- Google Fonts: Syne (display) + DM Sans (body) -->
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+  <!-- Font Awesome icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+<body class="dark-mode">
 
-<body>
+  <!-- ===== PRELOADER ===== -->
+  <div id="preloader">
+    <div class="loader-ring"></div>
+    <span class="loader-text">Loading...</span>
+  </div>
 
-<button id="theme-toggle" class="theme-btn">🌙</button>
+  <!-- ===== CUSTOM CURSOR ===== -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
 
-<nav class="navbar">
-    <h2 class="logo">Sonu H N</h2>
+  <!-- ===== THEME TOGGLE ===== -->
+  <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
+    <i class="fas fa-moon" id="theme-icon"></i>
+  </button>
 
-    <div class="menu-toggle" id="menu-toggle">☰</div>
+  <!-- ===== SCROLL TO TOP ===== -->
+  <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <!-- ===== NAVBAR ===== -->
+  <nav class="navbar" id="navbar">
+    <a href="#home" class="logo">Sonu<span class="accent">.</span></a>
+
+    <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
 
     <ul class="nav-links" id="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
-</nav>
+  </nav>
 
-<section id="home" class="hero section">
-    <img src="profile.jpg" class="profile-img">
-    <h1>Hi, I'm <span id="typing"></span></h1>
-    <p>Aspiring Web Developer</p>
-
-    <div class="buttons">
-        <a href="resume.pdf" class="btn">Download Resume</a>
-        <a href="#contact" class="btn">Contact Me</a>
+  <!-- ===== HERO ===== -->
+  <section id="home" class="hero section">
+    <div class="hero-bg-grid"></div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <p class="hero-greeting">👋 Hello, World!</p>
+        <h1 class="hero-name">I'm <span class="accent" id="typing"></span><span class="cursor-blink">|</span></h1>
+        <p class="hero-role">
+          <span class="role-badge">Aspiring Web Developer</span>
+        </p>
+        <p class="hero-desc">Building responsive, modern, and accessible web experiences — one line of code at a time.</p>
+        <div class="hero-buttons">
+          <a href="resume.pdf" class="btn btn-primary" download>
+            <i class="fas fa-download"></i> Resume
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i> Hire Me
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            <i class="fas fa-eye"></i> See Work
+          </a>
+        </div>
+        <div class="social-links">
+          <a href="https://github.com/Sonu-H-N" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="mailto:sonuhn0011@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="hero-image-wrap">
+        <div class="hero-image-ring"></div>
+        <img src="profile.jpg" alt="Sonu H N – Web Developer" class="profile-img" />
+        <div class="hero-status">
+          <span class="status-dot"></span> Open to Work
+        </div>
+      </div>
     </div>
-</section>
+    <a href="#about" class="scroll-down-arrow" aria-label="Scroll down">
+      <i class="fas fa-chevron-down"></i>
+    </a>
+  </section>
 
-<section id="about" class="section reveal">
-    <h2>About Me</h2>
-    <p>I am a passionate developer building responsive websites and modern UI.</p>
-</section>
-
-<section id="skills" class="section reveal">
-    <h2>Skills</h2>
-    <div class="skills">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Git</span>
-        <span>GitHub</span>
+  <!-- ===== ABOUT ===== -->
+  <section id="about" class="section reveal">
+    <div class="container">
+      <div class="section-label">Who Am I</div>
+      <h2 class="section-title">About <span class="accent">Me</span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>I'm <strong>Sonu H N</strong>, an aspiring web developer with a passion for crafting clean, responsive, and user-friendly websites. I love turning ideas into real, working products using the power of HTML, CSS, and JavaScript.</p>
+          <p>When I'm not coding, I'm exploring new technologies, solving problems, and constantly improving my skills to keep up with the ever-evolving world of web development.</p>
+          <div class="about-facts">
+            <div class="fact">
+              <i class="fas fa-code"></i>
+              <div>
+                <strong>2+</strong>
+                <span>Projects Built</span>
+              </div>
+            </div>
+            <div class="fact">
+              <i class="fas fa-graduation-cap"></i>
+              <div>
+                <strong>Learner</strong>
+                <span>Always Growing</span>
+              </div>
+            </div>
+            <div class="fact">
+              <i class="fas fa-map-marker-alt"></i>
+              <div>
+                <strong>India</strong>
+                <span>Based In</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="about-card-wrap">
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3>Web Development</h3>
+            <p>Creating modern, responsive websites with clean code and great UX.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fas fa-paint-brush"></i></div>
+            <h3>UI Design</h3>
+            <p>Designing beautiful, intuitive interfaces that users love.</p>
+          </div>
+          <div class="about-card">
+            <div class="about-card-icon"><i class="fab fa-github"></i></div>
+            <h3>Open Source</h3>
+            <p>Sharing work publicly and contributing to the dev community.</p>
+          </div>
+        </div>
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="projects" class="section reveal">
-    <h2>Projects</h2>
+  <!-- ===== SKILLS ===== -->
+  <section id="skills" class="section reveal">
+    <div class="container">
+      <div class="section-label">What I Know</div>
+      <h2 class="section-title">My <span class="accent">Skills</span></h2>
 
-    <div class="projects">
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-tab="tech">Technical</button>
+        <button class="tab-btn" data-tab="tools">Tools</button>
+      </div>
 
-        <div class="card">
-            <h3>Calculator App</h3>
-            <p>Basic calculator using JS.</p>
-            <a href="https://github.com/Sonu-H-N/calculator-app" target="_blank">GitHub</a>
+      <div class="tab-content active" id="tab-tech">
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#e34c26;"><i class="fab fa-html5"></i></div>
+            <span>HTML5</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#264de4;"><i class="fab fa-css3-alt"></i></div>
+            <span>CSS3</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#f7df1e; color:#000;"><i class="fab fa-js"></i></div>
+            <span>JavaScript</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="70"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#06b6d4;"><i class="fas fa-mobile-alt"></i></div>
+            <span>Responsive Design</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="80"></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="tab-content" id="tab-tools">
+        <div class="skills-grid">
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#f05032;"><i class="fab fa-git-alt"></i></div>
+            <span>Git</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#24292e;"><i class="fab fa-github"></i></div>
+            <span>GitHub</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="75"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#007ACC;"><i class="fas fa-code"></i></div>
+            <span>VS Code</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="85"></div></div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-icon" style="background:#38bdf8;"><i class="fas fa-wind"></i></div>
+            <span>Figma / Design</span>
+            <div class="skill-bar"><div class="skill-fill" data-width="50"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS ===== -->
+  <section id="projects" class="section reveal">
+    <div class="container">
+      <div class="section-label">What I've Built</div>
+      <h2 class="section-title">My <span class="accent">Projects</span></h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-calculator"></i></div>
+            <div class="project-links">
+              <a href="https://github.com/Sonu-H-N/calculator-app" target="_blank" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+              </a>
+            </div>
+          </div>
+          <h3>Calculator App</h3>
+          <p>A fully functional, stylish calculator built with vanilla JavaScript. Supports all basic arithmetic operations.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="https://github.com/Sonu-H-N/calculator-app" class="project-cta" target="_blank">
+            View Project <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
 
-        <div class="card">
-            <h3>Portfolio Website</h3>
-            <p>My personal portfolio.</p>
+        <div class="project-card featured">
+          <div class="project-badge">⭐ Featured</div>
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-user-circle"></i></div>
+            <div class="project-links">
+              <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" aria-label="Live"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+          </div>
+          <h3>Portfolio Website</h3>
+          <p>My personal portfolio — a fully responsive, animated portfolio with dark/light mode, smooth scroll, and modern UI/UX design.</p>
+          <div class="project-tags">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <a href="#home" class="project-cta">
+            You're Here! <i class="fas fa-check"></i>
+          </a>
         </div>
 
+        <!-- Placeholder for future projects -->
+        <div class="project-card coming-soon">
+          <div class="project-header">
+            <div class="project-icon"><i class="fas fa-rocket"></i></div>
+          </div>
+          <h3>Coming Soon</h3>
+          <p>Something exciting is in the works. Stay tuned for more projects!</p>
+          <div class="project-tags">
+            <span>???</span>
+          </div>
+        </div>
+
+      </div>
     </div>
-</section>
+  </section>
 
-<section id="contact" class="section reveal">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:sonuhn0011@gmail.com">sonuhn0011@gmail.com</a></p>
-</section>
+  <!-- ===== CONTACT ===== -->
+  <section id="contact" class="section reveal">
+    <div class="container">
+      <div class="section-label">Get In Touch</div>
+      <h2 class="section-title">Contact <span class="accent">Me</span></h2>
 
-<footer>
-<p>© 2026 Sonu H N | Built with ❤️</p>
-</footer>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <p>I'm currently open to new opportunities and collaborations. Whether you have a project in mind, a question, or just want to say hi — my inbox is always open!</p>
 
-<script src="script.js"></script>
+          <div class="contact-items">
+            <a href="mailto:sonuhn0011@gmail.com" class="contact-item">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <strong>Email</strong>
+                <span>sonuhn0011@gmail.com</span>
+              </div>
+            </a>
+            <a href="https://github.com/Sonu-H-N" target="_blank" class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-github"></i></div>
+              <div>
+                <strong>GitHub</strong>
+                <span>Sonu-H-N</span>
+              </div>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="contact-item">
+              <div class="contact-item-icon"><i class="fab fa-linkedin-in"></i></div>
+              <div>
+                <strong>LinkedIn</strong>
+                <span>Connect with me</span>
+              </div>
+            </a>
+          </div>
+        </div>
 
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Sonu H N" required />
+            <span class="form-error" id="nameErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="you@example.com" required />
+            <span class="form-error" id="emailErr"></span>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project..." required></textarea>
+            <span class="form-error" id="msgErr"></span>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full">
+            <i class="fas fa-paper-plane"></i> Send Message
+          </button>
+          <div class="form-success" id="formSuccess">
+            <i class="fas fa-check-circle"></i> Message sent! I'll reply soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <span class="logo">Sonu<span class="accent">.</span></span>
+        <p>© 2026 Sonu H N &nbsp;·&nbsp; Built with <span class="accent">❤️</span> and lots of ☕</p>
+        <div class="footer-links">
+          <a href="https://github.com/Sonu-H-N" target="_blank"><i class="fab fa-github"></i></a>
+          <a href="mailto:sonuhn0011@gmail.com"><i class="fas fa-envelope"></i></a>
+          <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
