@@ -6,64 +6,65 @@
   <meta name="description" content="Sonu H N – Aspiring Web Developer skilled in HTML, CSS, JavaScript, Git & GitHub. Check out my projects and get in touch." />
   <meta name="keywords" content="Sonu H N, Web Developer, Portfolio, HTML, CSS, JavaScript, Frontend Developer" />
   <meta name="author" content="Sonu H N" />
-
+ 
   <!-- Open Graph / Social Preview -->
   <meta property="og:title" content="Sonu H N | Web Developer Portfolio" />
   <meta property="og:description" content="Aspiring Web Developer building responsive and modern UIs." />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="profile.jpg" />
-
+ 
   <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>" />
-
+ 
   <title>Sonu H N | Web Developer Portfolio</title>
-
+ 
   <!-- Google Fonts: Syne (display) + DM Sans (body) -->
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
   <!-- Font Awesome icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-
+ 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body class="dark-mode">
-
+ 
   <!-- ===== PRELOADER ===== -->
   <div id="preloader">
     <div class="loader-ring"></div>
     <span class="loader-text">Loading...</span>
   </div>
-
+ 
   <!-- ===== CUSTOM CURSOR ===== -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
-
+ 
   <!-- ===== THEME TOGGLE ===== -->
   <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">
     <i class="fas fa-moon" id="theme-icon"></i>
   </button>
-
+ 
   <!-- ===== SCROLL TO TOP ===== -->
   <button id="scroll-top" class="scroll-top-btn" aria-label="Scroll to top">
     <i class="fas fa-arrow-up"></i>
   </button>
-
+ 
   <!-- ===== NAVBAR ===== -->
   <nav class="navbar" id="navbar">
     <a href="#home" class="logo">Sonu<span class="accent">.</span></a>
-
+ 
     <button class="menu-toggle" id="menu-toggle" aria-label="Open menu">
       <span></span><span></span><span></span>
     </button>
-
+ 
     <ul class="nav-links" id="nav-links">
       <li><a href="#home" class="nav-link">Home</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#skills" class="nav-link">Skills</a></li>
       <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#achievements" class="nav-link">Achievements</a></li>
       <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
-
+ 
   <!-- ===== HERO ===== -->
   <section id="home" class="hero section">
     <div class="hero-bg-grid"></div>
@@ -104,7 +105,7 @@
       <i class="fas fa-chevron-down"></i>
     </a>
   </section>
-
+ 
   <!-- ===== ABOUT ===== -->
   <section id="about" class="section reveal">
     <div class="container">
@@ -158,18 +159,18 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- ===== SKILLS ===== -->
   <section id="skills" class="section reveal">
     <div class="container">
       <div class="section-label">What I Know</div>
       <h2 class="section-title">My <span class="accent">Skills</span></h2>
-
+ 
       <div class="skills-tabs">
         <button class="tab-btn active" data-tab="tech">Technical</button>
         <button class="tab-btn" data-tab="tools">Tools</button>
       </div>
-
+ 
       <div class="tab-content active" id="tab-tech">
         <div class="skills-grid">
           <div class="skill-item">
@@ -194,7 +195,7 @@
           </div>
         </div>
       </div>
-
+ 
       <div class="tab-content" id="tab-tools">
         <div class="skills-grid">
           <div class="skill-item">
@@ -221,15 +222,15 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- ===== PROJECTS ===== -->
   <section id="projects" class="section reveal">
     <div class="container">
       <div class="section-label">What I've Built</div>
       <h2 class="section-title">My <span class="accent">Projects</span></h2>
-
+ 
       <div class="projects-grid">
-
+ 
         <div class="project-card">
           <div class="project-header">
             <div class="project-icon"><i class="fas fa-calculator"></i></div>
@@ -248,7 +249,7 @@
             View Project <i class="fas fa-arrow-right"></i>
           </a>
         </div>
-
+ 
         <div class="project-card featured">
           <div class="project-badge">⭐ Featured</div>
           <div class="project-header">
@@ -267,7 +268,7 @@
             You're Here! <i class="fas fa-check"></i>
           </a>
         </div>
-
+ 
         <!-- Placeholder for future projects -->
         <div class="project-card coming-soon">
           <div class="project-header">
@@ -279,21 +280,46 @@
             <span>???</span>
           </div>
         </div>
-
+ 
       </div>
     </div>
   </section>
-
+ 
+  <!-- ===== ACHIEVEMENTS ===== -->
+  <section id="achievements" class="section reveal">
+    <div class="container">
+      <div class="section-label">Recognition</div>
+      <h2 class="section-title">Achievements & <span class="accent">Certificates</span></h2>
+ 
+      <div class="achievements-grid">
+ 
+        <div class="achievement-card">
+          <div class="achievement-icon"><i class="fas fa-trophy"></i></div>
+          <div class="achievement-body">
+            <span class="achievement-tag">Hackathon</span>
+            <h3>IdeaRush 1.0</h3>
+            <p>Participated in IdeaRush 1.0, a competitive ideathon that challenges participants to innovate and present creative solutions. Earned an official certificate of participation.</p>
+            <div class="achievement-meta">
+              <span><i class="fas fa-calendar-alt"></i> 2025</span>
+              <span><i class="fas fa-certificate"></i> Certificate of Participation</span>
+            </div>
+          </div>
+        </div>
+ 
+      </div>
+    </div>
+  </section>
+ 
   <!-- ===== CONTACT ===== -->
   <section id="contact" class="section reveal">
     <div class="container">
       <div class="section-label">Get In Touch</div>
       <h2 class="section-title">Contact <span class="accent">Me</span></h2>
-
+ 
       <div class="contact-grid">
         <div class="contact-info">
           <p>I'm currently open to new opportunities and collaborations. Whether you have a project in mind, a question, or just want to say hi — my inbox is always open!</p>
-
+ 
           <div class="contact-items">
             <a href="mailto:sonuhn0011@gmail.com" class="contact-item">
               <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
@@ -318,7 +344,7 @@
             </a>
           </div>
         </div>
-
+ 
         <form class="contact-form" id="contact-form" novalidate>
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -345,7 +371,7 @@
       </div>
     </div>
   </section>
-
+ 
   <!-- ===== FOOTER ===== -->
   <footer class="footer">
     <div class="container">
@@ -360,7 +386,7 @@
       </div>
     </div>
   </footer>
-
+ 
   <script src="script.js"></script>
 </body>
 </html>
